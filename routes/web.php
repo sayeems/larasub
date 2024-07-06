@@ -24,7 +24,7 @@ Route::get('/dashboard', function () {
 //     return Inertia::render('Plans');
 // })->middleware(['auth', 'verified'])->name('plans');
 
-Route::get('/plans', [PlanController::class, 'index'])->name('plans.index');
+Route::get('/plans', [PlanController::class, 'index'])->name('plans');
 Route::post('/subscribe', [SubscriptionController::class, 'subscribe'])->name('subscribe');
 
 Route::middleware('auth')->group(function () {

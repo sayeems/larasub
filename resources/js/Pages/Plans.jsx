@@ -1,5 +1,6 @@
 import AuthenticatedLayout from "@/Layouts/AuthenticatedLayout";
 import { Head } from "@inertiajs/react";
+import { Button } from "@/Components/ui/button";
 
 const Plans = ({ plans, auth }) => {
     const handleSubscribe = (planId) => {
@@ -22,6 +23,7 @@ const Plans = ({ plans, auth }) => {
             <Head title="Plans" />
             <div>
                 <h1>Plans</h1>
+                <Button>Click me</Button>
                 <ul>
                     {plans.map((plan) => (
                         <li key={plan.id}>
