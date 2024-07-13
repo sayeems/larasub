@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ByteController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
@@ -26,6 +27,8 @@ Route::get('/dashboard', function () {
 
 Route::get('/plans', [PlanController::class, 'index'])->name('plans');
 Route::post('/subscribe', [SubscriptionController::class, 'subscribe'])->name('subscribe');
+
+Route::resource('bytes', ByteController::class);
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
